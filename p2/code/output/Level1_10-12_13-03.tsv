@@ -1,0 +1,236 @@
+	Word	POS_tag	Named_Entity	Entity	Measured_Entity
+0	Two	CD			
+1	days	NNS			
+2	ago	RB			
+3	,	,			
+4	on	IN			
+5	Monday	NNP			
+6	,	,			
+7	John	NNP	PERSON		
+8	,	,			
+9	who	WP			
+10	was	VBD			
+11	sick	JJ			
+12	for	IN			
+13	5	CD			5 days
+14	days	NNS			
+15	until	IN			
+16	Sunday	NNP			
+17	,	,			
+18	finally	RB			
+19	ate	VB			
+20	a	DT			
+21	red	JJ			
+22	apple	NN			
+23	from	IN			
+24	the	DT			
+25	fridge	NN			
+26	at	IN			
+27	the	DT			
+28	table	NN			
+29	in	IN			
+30	his	PRP$			
+31	office	NN			
+32	.	.			
+33	Two	CD			
+34	days	NNS			
+35	ago	RB			
+36	,	,			
+37	on	IN			
+38	Monday	NNP			
+39	,	,			
+40	John	NNP	PERSON		
+41	,	,			
+42	who	WP			
+43	was	VBD			
+44	sick	JJ			
+45	for	IN			
+46	5	CD			5 days
+47	days	NNS			
+48	until	IN			
+49	Sunday	NNP			
+50	,	,			
+51	finally	RB			
+52	ate	JJ			
+53	5	CD			
+54	red	JJ			
+55	apples	NNS			
+56	from	IN			
+57	the	DT			
+58	fridge	NN			
+59	at	IN			
+60	the	DT			
+61	table	NN			
+62	in	IN			
+63	his	PRP$			
+64	office	NN			
+65	.	.			
+66	Two	CD			
+67	days	NNS			
+68	ago	RB			
+69	,	,			
+70	on	IN			
+71	Monday	NNP			
+72	,	,			
+73	John	NNP	PERSON		
+74	,	,			
+75	who	WP			
+76	was	VBD			
+77	sick	JJ			
+78	for	IN			
+79	5	CD			5 days
+80	days	NNS			
+81	until	IN			
+82	Sunday	NNP			
+83	,	,			
+84	finally	RB			
+85	ate	VB			
+86	all	DT			
+87	red	JJ			
+88	apples	NNS			
+89	from	IN			
+90	the	DT			
+91	fridge	NN			
+92	at	IN			
+93	the	DT			
+94	table	NN			
+95	in	IN			
+96	his	PRP$			
+97	office	NN			
+98	.	.			
+99	Two	CD			
+100	days	NNS			
+101	ago	RB			
+102	,	,			
+103	on	IN			
+104	Monday	NNP			
+105	,	,			
+106	John	NNP	PERSON		
+107	,	,			
+108	who	WP			
+109	was	VBD			
+110	sick	JJ			
+111	for	IN			
+112	5	CD			5 days
+113	days	NNS			
+114	until	IN			
+115	Sunday	NNP			
+116	,	,			
+117	finally	RB			
+118	ate	VB			
+119	the	DT			
+120	red	JJ			
+121	apple	NN			
+122	from	IN			
+123	the	DT			
+124	fridge	NN			
+125	at	IN			
+126	the	DT			
+127	table	NN			
+128	in	IN			
+129	his	PRP$			
+130	office	NN			
+131	.	.			
+132	John	NNP	PERSON		
+133	ate	VBP			
+134	the	DT			
+135	apple	NN			
+136	at	IN			
+137	the	DT			
+138	table	NN			
+139	.	.			
+140	John	NNP	PERSON		
+141	,	,			
+142	who	WP			
+143	ate	VBP			
+144	the	DT			
+145	apple	NN			
+146	from	IN			
+147	the	DT			
+148	fridge	NN			
+149	,	,			
+150	was	VBD			
+151	sick	JJ			
+152	Wednesday	NNP			
+153	.	.			
+154	On	IN			
+155	Monday	NNP			
+156	,	,			
+157	John	NNP	PERSON		
+158	ate	VBP			
+159	the	DT			
+160	apple	NN			
+161	in	IN			
+162	his	PRP$			
+163	office	NN			
+164	.	.			
+165	Last	JJ			
+166	week	NN			
+167	,	,			
+168	on	IN			
+169	Monday	NNP			
+170	,	,			
+171	John	NNP	PERSON		
+172	finally	RB			
+173	took	VBD			
+174	the	DT			
+175	apple	NN			
+176	from	IN			
+177	the	DT			
+178	fridge	NN			
+179	to	TO			
+180	his	PRP$			
+181	office	NN			
+182	.	.			
+183	Heart	NNP	GPE		
+184	rate	NN			
+185	greater	JJR			
+186	than	IN			
+187	90	CD			90 beats/minute
+188	beats/minute	NN		Unit	
+189	.	.			
+190	Body	NN	GPE		
+191	temperature	NN			
+192	over	IN			
+193	38	CD			
+194	or	CC			
+195	under	IN			
+196	36	CD			36 degrees
+197	degrees	NNS			
+198	Celsius	NNP	PERSON		
+199	.	.			
+200	Respiratory	JJ			
+201	rate	NN			
+202	greater	JJR			
+203	than	IN			
+204	20	CD			20 breaths/minute
+205	breaths/minute	NN		Unit	
+206	or	CC			
+207	partial	JJ			
+208	pressure	NN			
+209	of	IN			
+210	CO2	NNP	ORGANIZATION		
+211	less	JJR			
+212	than	IN			
+213	32	CD			32 mmHg
+214	mmHg	NN			
+215	.	.			
+216	Leukocyte	NNP	GPE		
+217	count	NN			
+218	greater	JJR			
+219	than	IN			
+220	12000	CD			
+221	or	CC			
+222	less	JJR			
+223	than	IN			
+224	4000	CD			4000 /microliters
+225	/microliters	NNS		Unit	
+226	or	CC			
+227	over	RB			
+228	10	CD			10 %
+229	%	NN			
+230	immature	NN			
+231	forms	NNS			
+232	or	CC			
+233	bands	NNS			
+234	.	.			

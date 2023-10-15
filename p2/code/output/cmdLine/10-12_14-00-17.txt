@@ -1,0 +1,13 @@
+[('Two', 'CD'), ('days', 'NNS'), ('ago', 'RB'), (',', ','), ('on', 'IN'), ('Monday', 'NNP'), (',', ','), ('John', 'NNP'), (',', ','), ('who', 'WP'), ('was', 'VBD'), ('sick', 'JJ'), ('for', 'IN'), ('5', 'CD'), ('days', 'NNS'), ('until', 'IN'), ('Sunday', 'NNP'), (',', ','), ('finally', 'RB'), ('ate', 'VB'), ('a', 'DT'), ('red', 'JJ'), ('apple', 'NN'), ('from', 'IN'), ('the', 'DT'), ('fridge', 'NN'), ('at', 'IN'), ('the', 'DT'), ('table', 'NN'), ('in', 'IN'), ('his', 'PRP$'), ('office', 'NN'), ('.', '.')]Displaying parsed tree:
+                                                                                                  S                                                                                            
+      ____________________________________________________________________________________________|_________________________________________________________________________________________    
+     |        |   |        |          |    |    |    |       |        |       |              |          |      |     |   |   |    |         PP                 PP                |          |  
+     |        |   |        |          |    |    |    |       |        |       |              |          |      |     |   |   |    |     ____|___            ___|___              |          |   
+     CP       |   |        PP         |    |    |    |       VP       |       CP             PP         |      |     |   |   |    |    |        NP         |       NP            NP         |  
+  ___|___     |   |     ___|____      |    |    |    |    ___|___     |    ___|___       ____|____      |      |     |   |   |    |    |     ___|____      |    ___|____      ___|____      |   
+ |       NP   |   |    |        NP    |    NP   |    |   VP      |    |   |       NP    |         NP    |      |     |   |   |    NP   |    |        NP    |   |        NP   |   |    NP    |  
+ |       |    |   |    |        |     |    |    |    |   |       |    |   |       |     |         |     |      |     |   |   |    |    |    |        |     |   |        |    |   |    |     |   
+ CD     NNS   RB PUNC  IN      NNP   PUNC NNP  PUNC  WP VBD      JJ   IN  CD     NNS    IN       NNP   PUNC    RB    VB  DT  JJ   NN   IN   DT       NN    IN  DT       NN   IN PRP   NN   PUNC
+ |       |    |   |    |        |     |    |    |    |   |       |    |   |       |     |         |     |      |     |   |   |    |    |    |        |     |   |        |    |   |    |     |   
+Two     days ago  ,    on     Monday  ,   John  ,   who was     sick for  5      days until     Sunday  ,   finally ate  a  red apple from the     fridge  at the     table  in his office  .  
+

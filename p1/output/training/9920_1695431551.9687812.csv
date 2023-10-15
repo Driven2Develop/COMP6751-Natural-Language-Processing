@@ -1,0 +1,9 @@
+,Word,POS_tag,Named_Entity,Gazetteer_Annotation
+0,Walker,NNP,NE,
+1,has,VBZ,n/a,
+2,"7,600",CD,n/a,
+3,customers,NNS,n/a,
+4,in,IN,n/a,
+5,northeast,JJ,n/a,
+6,Georgia,NNP,n/a,Country
+7,.,.,n/a,
