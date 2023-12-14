@@ -1,0 +1,13 @@
+	Word	POS_tag	Named_Entity	Entity	Measured_Entity
+0	the	DT			
+1	story	NN			
+2	itself	PRP			
+3	is	VBZ			
+4	ludicrous	JJ			
+5	and	CC			
+6	uninteresting	JJ			
+7	and	CC			
+8	so	RB			
+9	are	VBP			
+10	its	PRP$			
+11	elements	NNS			

@@ -1,0 +1,198 @@
+Overall Sentiment of sentence >> He gave her an ugly sweater . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 16	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> I saw a dull and scary movie . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 4	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> It was a mess and a hazard . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 64	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> manipulative movie making . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 10	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> shamelessly manipulative movie making . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 10	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> it's a compelling story , but it has low impact . << is positive.
+The total sentiment count from all the produced trees is:
+Positive: 8	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> well-intentioned but manipulative movie making . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 32	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> a perfect example of well-intentioned but manipulative movie making . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 14	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> a perfect example of rancid , well-intentioned , but shamelessly manipulative movie making . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 8	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> the story itself is ludicrous and uninteresting and so are its elements . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 784	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> however this movie's execution is completely unacceptable . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 12	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> the dialogue is probably the worst i have ever seen in any movie , mainly because the whole movie depends on the boring script and the ridiculous words these characters use is what hollywood thinks kids can relate to . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> the result is a wild cornucopia of images that amount to precisely nil -- even the action scenes don't work . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> not surprisingly , the nighttime forest frenzy does not go unnoticed and when two girls fail to wake the following morning , witches are invoked by those eager to blame . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> it is unsuccessful because not only is the boxing theme dull , but the side story of the two guys and a girl travelling across the country is even worse . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> it has low impact . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 2
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> this is an example . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 23	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> this is an example of movie making . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 42	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> it's a compelling story . << is positive.
+The total sentiment count from all the produced trees is:
+Positive: 4	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> it has low impact but it's a compelling story . << is positive.
+The total sentiment count from all the produced trees is:
+Positive: 8	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> it has gut-wrenching impact and it is a compelling story . << is positive.
+The total sentiment count from all the produced trees is:
+Positive: 64	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> this does not have gut-wrenching impact but it's a compelling story . << is positive.
+The total sentiment count from all the produced trees is:
+Positive: 4664	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> this compelling story with gut-wrenching impact . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 34	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> this may not have the dramatic gut-wrenching impact of other holocaust films , but it's a compelling story , mainly because of the way it's told by the people who were there . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> a perfect example . << is positive.
+The total sentiment count from all the produced trees is:
+Positive: 1	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> well-intentioned movie making . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 8	Negative: 19	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> It was too long but entertaining . << is positive.
+The total sentiment count from all the produced trees is:
+Positive: 36	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> the sound , the music , and all the effects were effective , and the last hour kept us entertained . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> it is a film that will be discussed and debated for years to come . << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 256	Neutral: 24
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> everyone is so happy , basking in the glow of overnight success , marvelling at it all--except toward the end , but even then the tone quickly reverts to sweetness , ending on an appropriately feel-good note . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> we not only feel more involved in the story , but we feel like we're seeing the beginning of a saga that we have cherished for years . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall Sentiment of sentence >> i also really liked the soundtrack and the pace of the film , both of which zipped and zagged , and established a nice rhythm to it all . << is neutral.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall stance of paragraph is negative.
+The total sentiment count from all the processed sentences is:
+Positive: 7	Negative: 15	Neutral: 10
+
+<<---------------------------------------------------------------------------------------------------->>
+

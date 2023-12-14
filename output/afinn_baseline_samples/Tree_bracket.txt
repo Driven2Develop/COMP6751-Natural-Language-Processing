@@ -1,0 +1,128 @@
+Sentence >>He gave her an ugly sweater .<< has NEGATIVE sentiment. Valence = -1.1338934190276817
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>I saw a dull and scary movie .<< has NEGATIVE sentiment. Valence = -1.414213562373095
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>It was a mess and a hazard .<< has NEGATIVE sentiment. Valence = -0.7071067811865475
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>manipulative movie making .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>shamelessly manipulative movie making .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>it's a compelling story , but it has low impact .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>well-intentioned but manipulative movie making .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>a perfect example of well-intentioned but manipulative movie making .<< has POSITIVE sentiment. Valence = 0.9486832980505138.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>a perfect example of rancid , well-intentioned , but shamelessly manipulative movie making .<< has POSITIVE sentiment. Valence = 0.8017837257372732.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>the story itself is ludicrous and uninteresting and so are its elements .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>however this movie's execution is completely unacceptable .<< has NEGATIVE sentiment. Valence = -0.6666666666666666
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>the dialogue is probably the worst i have ever seen in any movie , mainly because the whole movie depends on the boring script and the ridiculous words these characters use is what hollywood thinks kids can relate to .<< has NEGATIVE sentiment. Valence = -1.4230249470757705
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>the result is a wild cornucopia of images that amount to precisely nil -- even the action scenes don't work .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>not surprisingly , the nighttime forest frenzy does not go unnoticed and when two girls fail to wake the following morning , witches are invoked by those eager to blame .<< has NEGATIVE sentiment. Valence = -0.8980265101338746
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>it is unsuccessful because not only is the boxing theme dull , but the side story of the two guys and a girl travelling across the country is even worse .<< has NEGATIVE sentiment. Valence = -0.8980265101338746
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>it has low impact .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>this is an example .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>this is an example of movie making .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>it's a compelling story .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>it has low impact but it's a compelling story .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>it has gut-wrenching impact and it is a compelling story .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>this does not have gut-wrenching impact but it's a compelling story .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>this compelling story with gut-wrenching impact .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>this may not have the dramatic gut-wrenching impact of other holocaust films , but it's a compelling story , mainly because of the way it's told by the people who were there .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>a perfect example .<< has POSITIVE sentiment. Valence = 1.5.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>well-intentioned movie making .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>It was too long but entertaining .<< has POSITIVE sentiment. Valence = 0.7559289460184544.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>the sound , the music , and all the effects were effective , and the last hour kept us entertained .<< has POSITIVE sentiment. Valence = 0.4364357804719848.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>it is a film that will be discussed and debated for years to come .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>everyone is so happy , basking in the glow of overnight success , marvelling at it all--except toward the end , but even then the tone quickly reverts to sweetness , ending on an appropriately feel-good note .<< has POSITIVE sentiment. Valence = 0.7905694150420948.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>we not only feel more involved in the story , but we feel like we're seeing the beginning of a saga that we have cherished for years .<< has POSITIVE sentiment. Valence = 0.7427813527082074.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>i also really liked the soundtrack and the pace of the film , both of which zipped and zagged , and established a nice rhythm to it all .<< has POSITIVE sentiment. Valence = 0.9284766908852594.
+
+<<---------------------------------------------------------------------------------------------------->>
+

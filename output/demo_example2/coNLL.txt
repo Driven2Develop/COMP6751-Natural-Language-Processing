@@ -1,0 +1,14 @@
+	Word	POS_tag	Named_Entity	Entity	Measured_Entity
+0	this	DT			
+1	does	VBZ			
+2	not	RB			
+3	have	VB			
+4	gut-wrenching	JJ			
+5	impact	NN			
+6	but	CC			
+7	it	PRP			
+8	's	VBZ			
+9	a	DT			
+10	compelling	JJ			
+11	story	NN			
+12	.	.			

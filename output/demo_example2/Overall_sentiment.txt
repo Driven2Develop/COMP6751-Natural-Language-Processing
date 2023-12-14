@@ -1,0 +1,12 @@
+Overall Sentiment of sentence >> this does not have gut-wrenching impact but it's a compelling story . << is positive.
+The total sentiment count from all the produced trees is:
+Positive: 4664	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall stance of paragraph is positive.
+The total sentiment count from all the processed sentences is:
+Positive: 1	Negative: 0	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+

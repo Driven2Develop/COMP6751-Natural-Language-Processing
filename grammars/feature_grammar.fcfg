@@ -1,0 +1,227 @@
+% start S
+
+### --------------- FEATURES ----------------------------------------- ###
+# S:
+#   - INV: (inversion in a sentence, starts with an auxiliary verb)
+# Nouns:
+#   - NUM: (singular or plural [sg, pl])
+#   - PERSON (first, second, third [1,2,3])
+#   - SENTI: sentiment based on opinion lexicon [positive, neutral, negative]
+# Verbs:
+#   - SUBCAT: (subcategory of verb intransitive or transitive [trans, intrans, dative])
+#       - Also includes Gerund verbs (ger)
+#   - AUX (auxiliary verb or not)
+#   - TENSE: past tense verbs can be used as adjectives
+# Coordinating Conjunction:
+#   - SUBCAT: specifies type of conjunction [AND, BUT, OR]
+# Adjectives
+#   - SENTI: sentiment based on opinion lexicon [positive, neutral, negative]
+
+### ------------------ PRODUCTIONS -------------------------------------- ###
+
+###############################################################################
+### ------------------ S PRODUCTIONS -------------------------------------- ###
+###############################################################################
+
+# S produictions with auxiliaries, used to pose a question
+S[+INV, SENTI=?s] -> V[+AUX] NP[NUM=?n, PERSON=?p, SENTI=?s] VP[NUM=?n, PERSON=?p] | V[+AUX] NP[NUM=?n, PERSON=?p] VP[NUM=?n, PERSON=?p, SENTI=?s]
+
+# Base S Productions with generalized sentiment agreement 
+S[-INV, SENTI=?s] -> NP[NUM=?n, PERSON=?p, SENTI=?s] | NP[NUM=?n, PERSON=?p, SENTI=?s] VP[NUM=?n, PERSON=?p,SENTI=?s]
+
+# case when a sentence starts with a conjunction to introduce a sentence. Conjoined sentences with an equal CC have the same sentiment
+S[-INV, SENTI=?s] -> CC S[-INV, SENTI=?s] | S[-INV, SENTI=?s] CC S[-INV, SENTI=?s]
+
+# assume sentiment comes from PP or RP. In these cases the NP acts as an object clause, or antecedent
+S[-INV, SENTI=?s] -> NP[NUM=?n, PERSON=?p] PP[NUM=?n, PERSON=?p, SENTI=?s] | NP[NUM=?n, PERSON=?p] RP[SENTI=?s] 
+
+# S productions with explicit sentiment agreement and generalized conjunctions
+S[-INV, SENTI=negative] -> S[-INV, SENTI=neutral] CC S[-INV, SENTI=negative] | S[-INV, SENTI=negative] CC S[-INV, SENTI=neutral]
+S[-INV, SENTI=positive] -> S[-INV, SENTI=neutral] CC S[-INV, SENTI=positive] | S[-INV, SENTI=positive] CC S[-INV, SENTI=neutral]
+
+# S productions with explicit sentiment agreement and specific unequal conjunctions, second clause is dominant sentiment
+S[-INV, SENTI=negative] -> S[-INV, SENTI=positive] UNEQ S[-INV, SENTI=negative]
+S[-INV, SENTI=positive] -> S[-INV, SENTI=negative] UNEQ S[-INV, SENTI=positive] 
+
+###############################################################################
+### ------------------ NP PRODUCTIONS -------------------------------------- ###
+###############################################################################
+
+# NP productions to single word, also link nouns (subject) to their reflexive pronoun
+NP[NUM=?n, PERSON=?p] -> N[NUM=?n, PERSON=?p]
+N[NUM=?n, PERSON=?p] -> PRP[NUM=?n, PERSON=?p] | DPRP[NUM=?n, PERSON=?p] | N[NUM=?n, PERSON=?p] RPRP[NUM=?n, PERSON=?p]
+
+# link nouns together by an auxiliary verb or possessive verb (movie's execution)
+NP[NUM=?n, PERSON=?p] -> N[NUM=?n, PERSON=?p] V[+AUX] N[NUM=?n, PERSON=?p]
+
+# NP productions to constituents: qualifying noun phrase, demonstrative noun phrase, or relative phrase
+NP[NUM=?n, PERSON=?p, SENTI=?s] -> QNP[NUM=?n, PERSON=?p, SENTI=?s] | DNP[NUM=?n, PERSON=?p, SENTI=?s] | RP[NUM=?n, PERSON=?p, SENTI=?s]
+
+# qualifying noun phrases that involve an adjective or other modifier, before and/or after the noun
+# we assume the adjective is more dominant in sentiment than the noun. The situation where the nouns sentiment conflicts with the adjective is uncommon
+QNP[NUM=?n, PERSON=?p, SENTI=?s] -> JJ[SENTI=?s] N[NUM=?n, PERSON=?p] | JJ[SENTI=?s] N[NUM=?n, PERSON=?p] JJ[SENTI=?s] | N[NUM=?n, PERSON=?p] JJ[SENTI=?s] 
+QNP[NUM=?n, PERSON=?p, SENTI=?s] -> DT[NUM=?n] JJ[SENTI=?s] N[NUM=?n, PERSON=?p] | DT[NUM=?n] N[NUM=?n, PERSON=?p, SENTI=?s]
+
+# relative phrase beginning with *wh* words, could end with a verb phrase or noun phrase. Optionally they can end with a Preposition phrase like most constituents
+RP[NUM=?n, PERSON=?p, SENTI=?s] -> WP NP[NUM=?n, PERSON=?p, SENTI=?s]
+RP[NUM=?n, PERSON=?p, SENTI=?s] -> WP VP[NUM=?n, PERSON=?p, SENTI=?s] | WP VP[NUM=?n, PERSON=?p, SENTI=?s] PP[NUM=?n, PERSON=?p, SENTI=?s]
+
+# RP can also recurse by connecting words together (the film that was popular which was old where the protagonist...)
+RP[NUM=?n, PERSON=?p, SENTI=?s] -> RP[SENTI=?s] RP[SENTI=?s]
+
+# demonstrative noun phrases that begin with a demonstrative pronoun like *this* or *that*
+DNP[NUM=?n, PERSON=?p, SENTI=?s] -> DPRP[NUM=?n, PERSON=?p] NP[NUM=?n, PERSON=?p, SENTI=?s] | DPRP[NUM=?n, PERSON=?p] VAUX[NUM=?n, PERSON=?p] NP[NUM=?n, PERSON=?p, SENTI=?s]
+
+# simple recursive nominal productions without sentiment
+NOM[NUM=?n, PERSON=?p] -> NOM N[NUM=?n, PERSON=?p] | N
+
+###############################################################################
+### ------------------ VP PRODUCTIONS -------------------------------------- ###
+###############################################################################
+
+# VP productions with intransitive verbs
+VP[NUM=?n, PERSON=?p, SENTI=?s] -> V[NUM=?n, SUBCAT='intrans'] | V[NUM=?n, SUBCAT='intrans'] PP[SENTI=?s]
+
+# VP productions with auxiliary verb phrases or phrases beginning with a gerund verb
+VP[NUM=?n, PERSON=?p, SENTI=?s] -> VAUX[NUM=?n, PERSON=?p, SENTI=?s] | VGER[NUM=?n, PERSON=?p, SENTI=?s]
+
+# VP productions with transitive & ditransitive verbs. We assume the sentiment comes from the object
+VP[NUM=?n, PERSON=?p, SENTI=?s] -> V[NUM=?n, SUBCAT='trans'] NP[NUM=?n, PERSON=?p, SENTI=?s] | V[NUM=?n, SUBCAT='trans'] VP[NUM=?n, PERSON=?p, SENTI=?s]
+VP[NUM=?n, PERSON=?p, SENTI=?s] -> V[NUM=?n, SUBCAT='dative'] NP NP[SENTI=?s] | V[NUM=?n, SUBCAT='dative'] NP[SENTI=?s] PP[NUM=?n, PERSON=?p, SENTI=?s]
+
+# VP productions with gerund verbs, they can chain together (travelling across the country getting into trouble ...)
+VGER[NUM=?n, PERSON=?p, SENTI=?s] -> V[SUBCAT='ger'] PP[SENTI=?s] | V[SUBCAT='ger'] PP[SENTI=?s] VGER[NUM=?n, PERSON=?p, SENTI=?s]
+
+# Verbal phrases that begin with auxiliaries
+
+# AUX single word productions, OR strings of auxiliaries
+VAUX[NUM=?n, PERSON=?p, SENTI=?s] -> V[+AUX] VAUX[NUM=?n, PERSON=?p, SENTI=?s] | JJ[SENTI=?s] 
+
+# AUX productions with constituents and sentiment.
+VAUX[NUM=?n, PERSON=?p, SENTI=?s] -> V[+AUX] NP[NUM=?n, PERSON=?p, SENTI=?s]
+
+# AUX productions with negation, inverts the sentiment
+VAUX[NUM=?n, PERSON=?p, SENTI=positive] -> V[+AUX] RB[+negation] NP[NUM=?n, PERSON=?p, SENTI=negative]
+VAUX[NUM=?n, PERSON=?p, SENTI=negative] -> V[+AUX] RB[+negation] NP[NUM=?n, PERSON=?p, SENTI=positive]
+
+###############################################################################
+### ------------------ PP PRODUCTIONS -------------------------------------- ###
+###############################################################################
+
+# PP and prepositional productions, PP can also be chained together (across the desk, under the shelf, beside the ...)
+PP[NUM=?n, PERSON=?p, SENTI=?s] -> IN NP[NUM=?n, PERSON=?p, SENTI=?s] | IN NP[NUM=?n, PERSON=?p, SENTI=?s] PP[NUM=?n, PERSON=?p, SENTI=?s]
+PP[NUM=?n, PERSON=?p, SENTI=?s] -> IN V[SUBCAT='intrans', SENTI=?s]
+
+IN -> RB IN | COMMA RB IN | IN RB
+
+##############################################################################################
+### ------------------ Adjective/Adverb PRODUCTIONS -------------------------------------- ###
+##############################################################################################
+
+# adjectives with a comma between. Conflicting sentiments neutralize
+JJ[SENTI=?s] -> JJ[SENTI=?s] COMMA JJ[SENTI=?s]
+JJ[SENTI=neutral] -> JJ[SENTI=positive] COMMA JJ[SENTI=negative] | JJ[SENTI=negative] COMMA JJ[SENTI=positive]
+
+# adjectives with conjunctions
+JJ[SENTI=?s] -> JJ[SENTI=?s] CC JJ[SENTI=?s]
+JJ[SENTI=negative] -> JJ[SENTI=positive] UNEQ JJ[SENTI=negative] | JJ[SENTI=neutral] CC JJ[SENTI=negative] | JJ[SENTI=negative] CC JJ[SENTI=neutral]
+JJ[SENTI=positive] -> JJ[SENTI=negative] UNEQ JJ[SENTI=positive] | JJ[SENTI=neutral] CC JJ[SENTI=positive] | JJ[SENTI=positive] CC JJ[SENTI=neutral]
+
+#sometimes a verb in the gerund subcategory can get treated as an adjective, same is true of past tense verbs
+JJ[SENTI=?s] -> V[SENTI=?s, SUBCAT='ger'] | V[TENSE='past', SENTI=?s] 
+
+# adverb productions with sentiment, they can compliment neighboring adjectives
+JJ[SENTI=?s] -> RB[SENTI=?s] JJ[SENTI=?s] | JJ[SENTI=?s] RB
+JJ[SENTI=positive] -> RB[SENTI=positive] JJ[SENTI=neutral] | JJ[SENTI=positive] RB
+JJ[SENTI=negative] -> RB[SENTI=negative] JJ[SENTI=neutral] | JJ[SENTI=negative] RB
+
+# adverbs can be combined together (may not). Negation follows after main adverb. 
+RB -> RB RB
+RB[+negation] -> RB RB[+negation]
+
+# adverb productions with sentiment, they can compliment neighboring verbs
+V[SENTI=?s] -> RB[SENTI=?s] V[SENTI=?s] | V[SENTI=?s] RB
+V[SENTI=positive] -> RB[SENTI=positive] V | V[SENTI=positive] RB
+V[SENTI=negative] -> RB[SENTI=negative] V | V[SENTI=negative] RB
+
+# other types of productions
+CC -> COMMA CC | CC CC
+
+### -------------LEXICON------------------------------------------- ###
+
+# Determiners
+DT[NUM=sg] -> 'every' | 'a' | 'an' 
+DT[NUM=pl] -> 'all'
+DT[NUM=?n] -> 'the' | 'some' | 'several' | 'these' | 'any' 
+
+# Punctuations
+COMMA -> ','
+
+# Nouns, no sentiment plural and singular
+N[NUM=sg, SENTI=?s] -> 'story' | 'impact' | 'example' | 'movie' | 'way' | 'sweater' | 'sound' | 'music' | 'hour' | 'film' | 'glow' | 'end' | 'tone' | 'note' | 'beginning' | 'saga' | 'soundtrack' | 'pace' | 'rhythm' | 'execution' | 'dialogue' | 'script' | 'hollywood' | 'result' | 'cornucopia' | 'forest' | 'frenzy' | 'morning'  | 'theme' | 'girl' | 'amount' | 'country'
+N[NUM=pl, SENTI=?s] -> 'films' | 'people' | 'effects' | 'years' | 'elements' | 'words' | 'characters' | 'kids' | 'images' | 'scenes' | 'girls' | 'witches' | 'guys'
+
+# Nouns with sentiment and singular
+N[NUM=sg, SENTI=negative] -> 'holocaust' | 'mess' | 'hazard' | 'nil' 
+N[NUM=sg, SENTI=positive] -> 'success' | 'sweetness'
+
+# Possessive Pronouns
+PRP[NUM=sg, PERSON=1] -> 'I' | 'i'
+PRP[NUM=pl, PERSON=1] -> 'We' | 'we' | 'us'
+PRP[NUM=?n, PERSON=2] -> 'you' | 'You'
+PRP[NUM=sg, PERSON=3] -> 'it' | 'It' | 'He' | 'her' | 'its'
+PRP[NUM=pl, PERSON=3] -> 'They' | 'they' | 'them' | 'everyone' | 'both' 
+
+# Reflexive pronouns
+RPRP[NUM=sg, PERSON=3] -> 'itself'
+
+#demonstrative pronouns
+DPRP[NUM=sg, PERSON=3] ->  'This' | 'this' 
+DPRP[NUM=pl, PERSON=3] ->  'These' | 'these' | 'those'
+DPRP[NUM=sg, PERSON=3] ->  'There' | 'there' | 'here'
+
+# Prepositions
+IN -> 'with' | 'because' | 'by' | 'of' | 'to' | 'for' | 'at' | 'then' | 'on' | 'across' | 'in' | 'toward' 
+
+# Coordinating Conjunction
+CC -> EQ | UNEQ
+EQ -> 'and' | 'or' | 'also' | '--' | 'so'
+UNEQ -> 'but' | 'except' | 'however'
+
+# Adjective
+JJ[SENTI=positive] -> 'perfect'  | 'effective' | 'happy' | 'feel-good' | 'nice'
+JJ[SENTI=negative] -> 'manipulative' | 'rancid' | 'ugly' | 'dull' | 'scary' | | 'unacceptable' | 'ridiculous' | 'worse' | 'worst' | 'unsuccessful' | 'ludicrous'
+JJ[SENTI=neutral] -> 'dramatic' | 'low' | 'other' | 'long' | 'last' | 'overnight' | 'whole' | 'wild' | 'action' | 'nighttime' | 'side' | 'two' 
+
+# Adverbs (with and without negation)
+RB[+negation, SENTI=?s] -> 'not' | 'Not' | "n't"
+RB[-negation, SENTI=neutral] -> 'mainly' | 'too' | 'then' | 'even' | 'quickly' | 'appropriately' | 'only' | 'more' | 'really' | 'completely' | 'probably' | 'precisely' | 'ever'
+RB[SENTI=negative, -negation] -> 'shamelessly'
+RB[SENTI=positive, -negation] -> 'surprisingly'
+
+# Verb auxiliaries
+V[NUM=sg, PERSON=3, +AUX] -> 'is' | "'s" | 'has' | 'does' | 'kept' 
+V[NUM=pl, +AUX] -> 'are' | "'re" | 'were'
+V[NUM=?s, +AUX] -> 'may' | 'can' | 'will' | 'be' 
+V[NUM=sg, +AUX, TENSE=past] -> 'was'
+
+## transitive, intransitive and ditransitive verbs
+V[SUBCAT=trans, -AUX] -> 'saw' | 'told' | 'reverts' | 'feel' | 'depends' | 'use' | 'thinks' | 'relate' | 'go' | 'fail' | 'wake' | 'eager' | 'do' | 'blame' | 'have'
+V[SUBCAT=dative, -AUX] -> 'gave'
+V[SUBCAT=intrans, -AUX] -> 'come' | 'like' | 'work' | 'seen'
+
+# verb past tense positive sentiment
+V[TENSE=past, SENTI=positive] ->  'liked' | 'cherished' | 'well-intentioned' | 'entertained'
+
+# no sentiment
+V[TENSE=past, SENTI=neutral] ->  'unnoticed' | 'involved' | 'established' | 'invoked' | 'zipped' | 'zagged' | 'discussed' | 'debated'
+
+# Gerund Verbs
+V[SUBCAT=ger, SENTI=positive] -> 'entertaining' | 'marvelling' | 'compelling'
+V[SUBCAT=ger, SENTI=?s] ->  'gut-wrenching' | 'basking' | 'seeing' | 'following' | 'making' | 'ending' | 'boxing'  
+V[SUBCAT=ger, SENTI=negative] ->  'uninteresting' | 'travelling' | 'boring' 
+
+# Wh-pronoun
+WP[+wh, NUM=sg] -> 'who' 
+WP[+wh, NUM=?s] -> 'which' | 'where' | 'when' | 'what' 
+WP[-wh] -> 'that'

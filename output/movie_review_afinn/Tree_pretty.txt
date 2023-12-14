@@ -1,0 +1,24 @@
+Sentence >>I saw a dull and scary movie .<< has NEGATIVE sentiment. Valence = -1.414213562373095
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>It was a mess and a hazard .<< has NEGATIVE sentiment. Valence = -0.7071067811865475
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>a perfect example of rancid , well-intentioned , but shamelessly manipulative movie making .<< has POSITIVE sentiment. Valence = 0.8017837257372732.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>the story itself is ludicrous and uninteresting and so are its elements .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>it has low impact but it's a compelling story .<< has NEUTRAL sentiment. Valence = 0.
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Sentence >>however this movie's execution is completely unacceptable .<< has NEGATIVE sentiment. Valence = -0.6666666666666666
+
+<<---------------------------------------------------------------------------------------------------->>
+

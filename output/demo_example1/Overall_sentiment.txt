@@ -1,0 +1,12 @@
+Overall Sentiment of sentence >> the story itself is ludicrous and uninteresting and so are its elements  << is negative.
+The total sentiment count from all the produced trees is:
+Positive: 0	Negative: 784	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
+Overall stance of paragraph is negative.
+The total sentiment count from all the processed sentences is:
+Positive: 0	Negative: 1	Neutral: 0
+
+<<---------------------------------------------------------------------------------------------------->>
+
