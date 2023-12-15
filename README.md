@@ -10,4 +10,6 @@ Output is always saved locally for further analysis in _output_ directory.
 ## Features
 * sentiment analysis of sentences and paragraphs using feature grammar or Afinn sentiment dictionary.
 * parsing of sentences and paragraphs using a **Feature Grammar** or **Context Free Grammar**.
-* Displays information in CoNLL format. 
+* Displays information in CoNLL format.
+
+To execute run the _pipeline.py_ file and follow the console prompts.
